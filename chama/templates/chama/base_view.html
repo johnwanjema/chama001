@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Chama</title>
+  {% load django_simple_bulma %}
+  {% bulma %}
+  {% font_awesome %}
+  {% load static %}
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <link rel="stylesheet" href="{% static 'chama/css/custom.css' %}">
+</head>
+
+<body>
+  <!-- Sidebar
+  <section class=" section">
+    <div class="columns">
+      <div class="column is-4-tablet is-3-desktop is-2-widescreen">
+        <aside class="menu">
+          <a class=" input button is-outlined is-medium is-fullwidth is-link" href=" {% url 'home' %} ">Home</a>
+
+          <p class="menu-label ">
+            GENERAL
+          </p>
+
+          <ul class="menu-list">
+            <li>
+              <a class="is-active" href={% url 'create-chama' %}><span class="icon ">
+
+                </span>Create Chama</a>
+            </li>
+
+
+          </ul>
+
+          <p class="menu-label ">
+            MY ACCOUNT
+          </p>
+          <ul class="menu-list ">
+
+            <li>
+              <a href={% url 'my-chamas' %}>
+                <span class="icon">
+                  <i class="fa fa-address-book"></i>
+                </span>
+                My Chamas
+              </a>
+            </li>
+
+            <li>
+              <a href="{% url 'logout' %}"><span class="icon ">
+                  <i class="fa fa-lock"></i>
+                </span>Log out</a>
+            </li>
+
+          </ul>
+
+
+        </aside>
+      </div>
+
+      
+
+
+    </div>
+  </section> -->
+  <!--End sidebar-->
+  </div>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://bulma.io">
+        Chama App
+      </a>
+
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+        data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+
+        <a class="navbar-item">
+          <a class="navbar-item" href={% url 'home' %}>
+            <span class="icon">
+              <i class="fa fa-address-book"></i>
+            </span>
+            Home
+          </a>
+        </a>
+        <a class="navbar-item is-active" href={% url 'create-chama' %}><span class="icon ">
+          </span>Create Chama</a>
+
+
+        <a class="navbar-item" href={% url 'my-chamas' %}>
+          <span class="icon">
+            <i class="fa fa-address-book"></i>
+          </span>
+          My Chamas
+        </a>
+
+
+
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+
+            <a class="navbar-item" href="{% url 'logout' %}"><span class="icon ">
+                <i class="fa fa-lock"></i>
+              </span>Log out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  {% block content %}
+  Content goes here
+  {% endblock %}
+
+  <div>
+    {% block js %}
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    {% endblock %}
+
+    {% block extrajs %}
+    <script src="{% static 'chama/js/src.js' %}"></script>
+    {% endblock %}
+
+</body>
+
+</html>

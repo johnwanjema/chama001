@@ -1,0 +1,1 @@
+web: gunicorn Chama.wsgi --log-file -
