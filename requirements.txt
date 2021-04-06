@@ -20,7 +20,7 @@ django-bulma==0.5.6
 django-daraja==1.1.1
 django-heroku==0.3.1
 django-money==0.14.4
-django-registration==2.4.1
+django-registration==3.1.2
 django-simple-bulma==1.1.6
 dominate==2.3.5
 evdev==0.7.0
